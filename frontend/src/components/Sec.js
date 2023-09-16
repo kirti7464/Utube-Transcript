@@ -33,11 +33,11 @@ export const Sec = () => {
 
   return (
     <div>
-      <p style={{ color: "white" , marginTop:"20px" }}>Enter a YouTube video link:</p>
-      <p style={{ color: "white" , marginTop:"5px" }}><small >
+      <p style={{ color: "white" , marginTop:"10px" }}>Enter a YouTube video link:</p>
+      <p style={{ color: "white" }}><small >
              ( Please wait a few seconds after clicking the go button )
             </small></p>
-      <div className="input-group mb-2" style={{ maxWidth: '400px' }}>
+      <div className="input-group mb-1" style={{ maxWidth: '400px' }}>
         <input
           type="text"
           className="form-control"
@@ -52,15 +52,14 @@ export const Sec = () => {
           </button>
         </div>
         {formData.youtubeUrl && (
-        <div style={{ marginTop: '20px' }}>
+        <div style={{ marginTop: '10px' }}>
           <iframe
             width="400"
             height="155"
             src={`https://www.youtube.com/embed/${formData.youtubeUrl}`}
             title="YouTube Video"
-            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </div>
       )}

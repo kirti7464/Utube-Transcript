@@ -51,7 +51,19 @@ export const Sec = () => {
             Go
           </button>
         </div>
-        
+        {formData.youtubeUrl && (
+        <div style={{ marginTop: '20px' }}>
+          <iframe
+            width="400"
+            height="155"
+            src={`https://www.youtube.com/embed/${formData.youtubeUrl}`}
+            title="YouTube Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      )}
         {transcriptionResponse && (
         <div style={{ color: "white" }}>
           <h3>Transcription Response:</h3>
